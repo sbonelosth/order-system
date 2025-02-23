@@ -14,7 +14,7 @@ export const OrderDetail = ({ order, onClose }: OrderDetailProps) => {
   };
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-20">
       <div className="bg-white rounded-lg shadow-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
         <div className="p-6">
           <div className="flex justify-between items-start">
@@ -47,7 +47,7 @@ export const OrderDetail = ({ order, onClose }: OrderDetailProps) => {
                     <span className="font-medium">{item.name}</span>
                     <span className="text-gray-500 ml-2">x{item.quantity}</span>
                   </div>
-                  <span>${(item.price * item.quantity).toFixed(2)}</span>
+                  <span>R{(item.price * item.quantity).toFixed(2)}</span>
                 </div>
               ))}
             </div>
@@ -56,7 +56,7 @@ export const OrderDetail = ({ order, onClose }: OrderDetailProps) => {
           <div className="mt-6">
             <div className="flex justify-between items-center font-semibold text-lg">
               <span>Total</span>
-              <span>${order.total.toFixed(2)}</span>
+              <span>R{order.total.toFixed(2)}</span>
             </div>
           </div>
 

@@ -8,7 +8,7 @@ export const QueueDisplay = () => {
   const readyOrders = orders.filter((order) => order.status === 'ready');
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-4 lg:grid grid-cols-2 lg:gap-4 space-y-0">
       <div className="bg-white rounded-lg shadow-md p-4 mx-4">
         <h2 className="text-xl font-semibold mb-4">Preparing</h2>
         <div className="space-y-4">

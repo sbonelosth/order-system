@@ -14,7 +14,7 @@ export const OrdersList = () => {
   );
 
   return (
-    <div className="space-y-4 mx-4">
+    <div className="space-y-4 mx-4 lg:grid lg:grid-cols-2 lg:gap-4 space-y-0">
       {sortedOrders.map((order) => (
         <div
           key={order.id}
@@ -84,7 +84,7 @@ export const OrdersList = () => {
                   <span>
                     {item.quantity}x {item.name}
                   </span>
-                  <span>${(item.price * item.quantity).toFixed(2)}</span>
+                  <span>R{(item.price * item.quantity).toFixed(2)}</span>
                 </li>
               ))}
             </ul>
@@ -106,7 +106,7 @@ export const OrdersList = () => {
               </span>
             </div>
             <div className="font-semibold">
-              Total: ${order.total.toFixed(2)}
+              Total: R{order.total.toFixed(2)}
             </div>
           </div>
         </div>

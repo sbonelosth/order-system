@@ -15,7 +15,6 @@ export const QueueDisplay = () => {
   return (
     <div className="min-h-screen bg-gray-100">
       <div className="container mx-auto py-6">
-        <h1 className="text-2xl font-bold mb-6">Order Queue</h1>
         <Queue />
       </div>
     </div>
